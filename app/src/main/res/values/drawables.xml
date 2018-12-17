@@ -1,0 +1,9 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item name="Home" type="drawable">home</item>
+    <item name="Get_School_Update" type="drawable">school</item>
+    <item name="Update_to_the_Latest_Version" type="drawable">update</item>
+    <item name="About" type="drawable">about</item>
+    <item name="ic_menu_share" type="drawable">share</item>
+    <item name="Help_and_Feedback" type="drawable">help</item>
+
+</resources>
