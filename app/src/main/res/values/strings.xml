@@ -14,7 +14,7 @@
           <item>Emaths</item>
     </string-array>
     <string-array name="course_array">
-        <item>Bachelor of Med and Bachelor of Surgery</item>
+        <item value="1">Bachelor of Med and Bachelor of Surgery</item>
         <item>Bachelor of Dental Surgery</item>
         <item>Doctor of Pharmacy</item>
         <item>BSc in Dietetics</item>
