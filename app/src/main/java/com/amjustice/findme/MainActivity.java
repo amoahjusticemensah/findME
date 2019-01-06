@@ -26,6 +26,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,16 +39,15 @@ public class MainActivity extends AppCompatActivity
     Spinner spinner3;
     Button CourseButton;
 
-    TextView resultTextView;
+    TextView firstView;
+    TextView secondView;
+
 
     ArrayList<String> subjects;
     ArrayList<String> subjects1;
     ArrayList<String> subjects2;
     ArrayList<String> subjects3;
 
-
-
-    ArrayList<String>second;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,11 +67,6 @@ public class MainActivity extends AppCompatActivity
         subjects.add("Biology");
         subjects.add("Physics");
         subjects.add("Emaths");
-
-
-
-
-
 
 
         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_item, subjects);
@@ -125,16 +120,13 @@ public class MainActivity extends AppCompatActivity
         spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
                 subjects3 = new ArrayList<>(subjects2);
                 subjects3.remove(i);
                 ArrayAdapter adapter3 = new ArrayAdapter(MainActivity.this, android.R.layout.simple_spinner_item, subjects3);
                 spinner3.setAdapter(adapter3);
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
         });*/
 
@@ -175,80 +167,76 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-
-
     public void Course(View view) {
 
 
+        LinearLayout layout = findViewById(R.id.firstLayout);
+        LinearLayout layout1 = findViewById(R.id.secondLayout);
+
+        // layout.setVisibility(View.VISIBLE);
+        TextView firstView = findViewById(R.id.firstView);
 
 
-        LinearLayout layout = (LinearLayout) findViewById(R.id.courseLayout);
+        // -- added for arraylist of all chemistry Suggestions --
+        ArrayList<String> chem1 = new ArrayList<>();
+        chem1.add(" ");
+        chem1.add("Bachelor of Medicine & Bachelor of Surgery");
+        chem1.add("Bachelor of Medical Laboratory");
+        chem1.add("Bsc in Respiratory Therapy");
+        chem1.add("Bsc in Nursing");
 
-        layout.setVisibility(View.VISIBLE);
-        TextView courseList = (TextView) findViewById(R.id.courseList);
+        ArrayList<String> chem2 = new ArrayList();
+        chem2.add("\n"+ "");
+        chem2.add("Bsc in Nutrition");
+        chem2.add("Bsc in Chemistry");
+        chem2.add("Bsc in Political Science");
 
-        ArrayList<String> first = new ArrayList<>();
-        first.add(" ");
-        first.add("Bachelor of Dental Medicine ");
-        first.add("Bachelor of surgery");
-        first.add("Bsc in Occupational Therapy");
-        first.add("Doctor of Physiotherapy");
+        ArrayList<String> chem3 = new ArrayList();
+        chem3.add("\n"+ "");
+        chem3.add("Bsc in Food Science");
+        chem3.add("Bsc in Animal Science");
 
+        ArrayList<String> chem4 = new ArrayList();
+        chem4.add("\n"+ "");
+        chem4.add("Bsc in Food Process Engineering");
+        chem4.add("Bsc in Geophysics");
+
+        ArrayList<String> chem5 = new ArrayList();
+        chem5.add("\n"+ "");
+        chem5.add("Bsc in Geophysics");
+        chem5.add("Bsc in Psychology");
+
+
+
+        // -- added below are the suggestions for chemistry---
         if (spinner1.getSelectedItem().toString().equals("Chemistry") && spinner2.getSelectedItem().toString().equals("Biology") && spinner3.getSelectedItem().toString().equals("Physics")) {
+            firstView.setText("\n"+"Suggested Courses include:");
 
 
+            for (String item : chem1) {
 
-            for (String item : first) {
-                courseList.setText(courseList.getText().toString() + item + "\n");
+                firstView.setText(firstView.getText().toString() +  "\n"+ item);
+            }
+            layout.setVisibility(View.VISIBLE);
+
+        } else if (spinner1.getSelectedItem().toString().equals("Chemistry") && spinner2.getSelectedItem().toString().equals("Biology") && spinner3.getSelectedItem().toString().equals("Emaths")) {
+
+            firstView.setText("\n"+"Suggested Courses include: ");
+            for (String item : chem2) {
+                firstView.setText(firstView.getText().toString() + item + "\n");
 
             }
+            // secondView.setText(secondView.getText().toString() + item + "\n");
+            layout.setVisibility(View.VISIBLE);
 
-
-            //Toast.makeText(getApplicationContext(), "Please select the Profession", Toast.LENGTH_SHORT).show();
-
-
-            //for (int i = 0; i < first.size(); i++) {
-
-            //courseList.setText(courseList.getText() + "\n" + first.get(i) + "");
-
-            // }
-
-
-        }
-
-
-
-        List<String> second = new ArrayList();
-        second.add(" ");
-        second.add("Bachelor of d ");
-        second.add("Bachelor of c");
-        second.add("Bsc in b");
-        second.add("Doctor of a");
-       if (spinner1.getSelectedItem().toString().equals("Biology") && spinner2.getSelectedItem().toString().equals("Chemistry") && spinner3.getSelectedItem().toString().equals("Physics")) {
-
-            for (String item : second) {
-                courseList.setText(courseList.getText().toString() + item + "\n");
-
-                //Toast.makeText(getApplicationContext(), "Please select the Profession", Toast.LENGTH_SHORT).show();
-
-
-                //for (int i = 0; i < first.size(); i++) {
-
-                //courseList.setText(courseList.getText() + "\n" + first.get(i) + "");
-
-                // }
-
-
-            }
         }
     }
-
 
 
     public void goback(View view) {
 
         // = true;
-        LinearLayout layout = (LinearLayout) findViewById(R.id.courseLayout);
+        LinearLayout layout = (LinearLayout) findViewById(R.id.firstLayout);
 
         layout.setVisibility(View.INVISIBLE);
 
@@ -314,6 +302,3 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 }
-
-
-
