@@ -7,29 +7,26 @@
             android:icon="@drawable/home"
             android:title="Home" />
         <item
-            android:id="@+id/nav_school"
+            android:id="@+id/nav_course"
             android:icon="@drawable/school"
-            android:title="Get School Update" />
+            android:title="Find Course" />
         <item
-            android:id="@+id/nav_update"
+            android:id="@+id/nav_about"
             android:icon="@drawable/update"
-            android:title="Update to the Latest Version" />
+            android:title="About" />
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_about"
+                android:id="@+id/nav_help"
                 android:icon="@drawable/about"
-                android:title="About" />
+                android:title="Help and Feedback" />
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
-            <item
-                android:id="@+id/nav_help"
-                android:icon="@drawable/feedback"
-                android:title="Help and Feedback" />
+
         </menu>
     </item>
 

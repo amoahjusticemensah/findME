@@ -12,74 +12,84 @@
     tools:showIn="@layout/app_bar_main">
 
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="111dp"
-        android:layout_height="33dp"
-        android:text="OPTION1 "
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="105dp" />
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F8FAF8F8">
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:background="@android:drawable/btn_dropdown"
-        android:entries="@array/course_array"
-        android:padding="0dp"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="95dp" />
+        <Button
+            android:id="@+id/hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#60A7F3"
+            android:text="Articles"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="249dp"
-        android:layout_height="50dp"
-        android:background="@android:drawable/btn_dropdown"
-        android:entries="@array/course_array"
-        android:padding="0dp"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="213dp" />
 
-    <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="235dp"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/btn_dropdown"
-        android:entries="@array/course_array"
-        android:padding="0dp"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="295dp" />
+        <Button
+            android:id="@+id/howareyou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#6AF507"
+            android:text="News Feed"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
 
-    <at.markushi.ui.CircleButton
-        android:id="@+id/CourseButton"
-        android:layout_width="132dp"
-        android:layout_height="83dp"
-        android:onClick="Course"
-        android:src="@drawable/ic_action_tick"
-        app:cb_color="#99CC00"
-        tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="440dp" />
+        <Button
+            android:id="@+id/goodevening"
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:background="#F3CE60"
+            android:text="Achievement"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="OPTION2"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="210dp" />
+        <Button
+            android:id="@+id/please"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E91E63"
+            android:text="Events"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="OPTION3"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="307dp" />
+        <Button
+            android:id="@+id/mynameis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#CDDC39"
+            android:text="Schedules"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="2"
+            app:layout_rowWeight="1" />
 
+        <Button
+            android:id="@+id/doyouspeakenglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2ED400"
+            android:text="Stream Live"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="2"
+            app:layout_rowWeight="1" />
+
+    </android.support.v7.widget.GridLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -4,6 +4,8 @@ import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,10 +20,10 @@ import android.widget.TextView;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-import static com.amjustice.findme.MainActivity.CourseButton;
-import static com.amjustice.findme.MainActivity.spinner1;
-import static com.amjustice.findme.MainActivity.spinner2;
-import static com.amjustice.findme.MainActivity.spinner3;
+import static com.amjustice.findme.CourseActivity.CourseButton;
+import static com.amjustice.findme.CourseActivity.spinner1;
+import static com.amjustice.findme.CourseActivity.spinner2;
+import static com.amjustice.findme.CourseActivity.spinner3;
 
 public class SubActivity extends AppCompatActivity {
 
@@ -34,6 +36,8 @@ public class SubActivity extends AppCompatActivity {
         TextView resultTextView = findViewById(R.id.resultTextView);
 
        // Animation animationSet = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slideoutbutton);
+
+        /*
 
 
         final AnimationSet animationSet = new AnimationSet(getApplicationContext(), null);
@@ -70,6 +74,8 @@ public class SubActivity extends AppCompatActivity {
             }
         });
 
+        */
+
 
 
 
@@ -79,6 +85,7 @@ public class SubActivity extends AppCompatActivity {
 
         // layout.setVisibility(View.VISIBLE);
         //   TextView firstView = findViewById(R.id.firstView);
+
 
 
         // -- added for arraylist of all chemistry Suggestions --
@@ -474,6 +481,7 @@ public class SubActivity extends AppCompatActivity {
 
         */
             }
+
         }
     }
 }
